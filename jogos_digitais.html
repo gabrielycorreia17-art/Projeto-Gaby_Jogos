@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jogos Digitais - 1º Ano</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #001771;
+            color: #dfd6d6;
+            line-height: 1.6;
+        }
+
+        /* CABEÇALHO */
+
+        header {
+            background: linear-gradient(135deg, #0011ff, #6608ca, #2918aa);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 20px;
+            margin: 5px;
+        }
+
+        /* MENU */
+
+        nav {
+            background-color: #dedde4;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: rgb(88, 9, 206);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #e5f4f8;
+        }
+
+        /* SEÇÕES */
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #fdfaff;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        /* INÍCIO */
+
+        .inicio {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .inicio img {
+            width: 45%;
+            border-radius: 15px;
+        }
+
+        .inicio-texto {
+            width: 55%;
+        }
+
+        .inicio-texto h2 {
+            text-align: left;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: rgb(53, 0, 145);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #dddee9;
+            margin-bottom: 10px;
+        }
+
+        /* ATIVIDADES */
+
+        .atividade {
+            background-color: rgb(75, 6, 145);
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 6px solid #0e39e1;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .atividade h3 {
+            color: #f1eff8;
+            margin-bottom: 10px;
+        }
+
+        /* PROJETO */
+
+        .projeto {
+            background: linear-gradient(135deg, #16222a, #3a6073);
+            color: rgb(255, 255, 255);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .projeto h2 {
+            color: rgb(255, 255, 255);
+        }
+
+        .botao {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #00a8cc;
+            color: rgb(39, 10, 136);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .botao:hover {
+            background-color: #007d99;
+        }
+
+        /* REFLEXÃO */
+
+        .reflexao {
+            background-color: #291fb0;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .reflexao p {
+            font-size: 19px;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        /* RESPONSIVIDADE */
+
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            nav a {
+                display: block;
+                margin: 8px;
+            }
+
+            .inicio {
+                flex-direction: column;
+            }
+
+            .inicio img,
+            .inicio-texto {
+                width: 100%;
+            }
+
+            .inicio-texto h2 {
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <h1>🎮 CrazyGames</h1>
+
+        <p></p>
+
+        <p>
+           CrazyGames é uma plataforma online de jogos gratuitos que podem ser jogados diretamente pelo navegador, como Google Chrome, sem precisar baixar ou instalar a maioria deles.
+        </p>
+
+    </header>
+
+
+    <!-- MENU -->
+
+    <nav>
+
+        <a href="#inicio">Início</a>
+
+        <a href="#tecnologias">Tipos de Jogos</a>
+
+        <a href="#inovacao">Como funciona</a>
+
+        <a href="#atividades">Outras plataformas</a>
+
+        <a href="#projeto">Conclusão</a>
+
+    </nav>
+
+
+    <!-- INÍCIO -->
+
+    <section id="inicio">
+
+        <div class="inicio">
+
+            <img
+                src="images.jpeg"
+                alt="Jogos digitais e controles"
+            >
+
+            <div class="inicio-texto">
+
+                <h2>🎮 Bem-vindos ao mundo dos jogos!</h2>
+
+                <p>
+                   
+                </p>
+
+                <br>
+
+                <p>
+                 
+
+
+
+O CrazyGames é uma plataforma online que oferece diversos jogos gratuitos para pessoas de diferentes idades. Por meio de um navegador e de uma ligação à internet, os usuários podem acessar e jogar diferentes tipos de jogos, como ação, aventura, corrida, desporto e quebra-cabeças, sem precisar instalar cada jogo no dispositivo. A plataforma tem como objetivo proporcionar entretenimento de forma simples, rápida e acessível, permitindo que os jogadores se divirtam utilizando computadores, tablets ou telemóveis.
+                </p>
+
+                <br>
+
+                <p>
+                    🕹️
+                </p>
+
+                <br>
+
+                <p>
+                    Um jogo digital combina regras, objetivos e interação para criar uma experiência divertida.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TECNOLOGIAS -->
+
+    <section id="tecnologias">
+
+        <h2>🎮 Tipos de jogos</h2>
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <img
+                    src="images (1).jpeg"
+                    alt="Jogos de ação e aventura"
+                >
+
+                <h3>⚔️ Ação e Aventura</h3>
+
+                <p>
+                    Jogos com desafios, exploração, missões, combates e histórias envolventes.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <img
+                    src="images (2).jpeg"
+                    alt="Jogos retrô e arcade"
+                >
+
+                <h3>👾 Arcade e Retrô</h3>
+
+                <p>
+                    Partidas rápidas, pontuação, reflexos e mecânicas simples que desafiam o jogador.
+                </p>
+
+            </div>
+
+
+            <div class="card"> 
+                
+                <img
+                src="images(3).jpeg"
+                 alt="Jogos de estratégia"
+                >
+
+                <h3>♟️ Estratégia e Simulação</h3>
+
+                <p>
+                    Jogos que envolvem planejamento, tomada de decisões, gerenciamento e resolução de problemas.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <img
+                    src="images (4).jpeg"
+                    alt="Jogos digitais e videogame"
+                >
+
+                <h3>🏁 Esportes e Corrida</h3>
+
+                <p>
+                    Competições, velocidade, precisão e trabalho em equipe em ambientes digitais.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INOVAÇÃO -->
+
+    <section id="inovacao">
+
+        <h2>Como funciona</h2>
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <h3>Acesso</h3>
+
+                <p>
+                   o usuário entra no site CrazyGames .
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Escolha</h3>
+
+                <p>
+                    seleciona um jogo entre as diversas categorias disponíveis.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Execução</h3>
+
+                <p>
+                   o jogo é carregado no navegador, utilizando tecnologias como HTML5 e WebGL.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Interação</h3>
+
+                <p>
+                   o usuário joga usando o teclado, o mouse ou os controles da tela.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TECNOLOGIA E SOCIEDADE -->
+
+    <section>
+
+        <div class="reflexao">
+
+            <h2> Jogos, Aprendizagem e Responsabilidade</h2>
+
+            <p>
+                Os jogos digitais podem divertir, ensinar, estimular a criatividade e desenvolver estratégias.
+            </p>
+
+            <br>
+
+            <p>
+                Também podem favorecer a colaboração e a resolução de problemas quando usados com equilíbrio.
+            </p>
+
+            <br>
+
+            <p>
+                É importante respeitar outros jogadores, proteger dados pessoais e equilibrar o tempo de jogo com outras atividades.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ATIVIDADES -->
+
+    <section id="atividades">
+
+        <h2>Outras plataformas</h2>
+
+
+        <div class="atividade">
+
+            <h3> Poki</h3>
+
+            <p>
+                Oferece jogos gratuitos de aventura, corrida, ação e jogos para dois jogadores.
+            </p>
+
+        </div>
+
+
+        <div class="atividade">
+
+            <h3> Y8 Games</h3>
+
+            <p>
+                Disponibiliza jogos de desporto, habilidade, ação e jogos clássicos.
+            </p>
+
+        </div>
+
+
+        <div class="atividade">
+
+            <h3>Friv</h3>
+
+            <p>
+                Jogos de aventura, habilidade, corridas e diversão casual.
+            </p>
+
+        </div>
+
+
+        <div class="atividade">
+
+            <h3>Newgrounds</h3>
+
+            <p>
+                Reúne jogos independentes, animações e criações de utilizadores.
+
+
+            </p>
+
+        </div>
+
+
+        <div class="atividade">
+
+            <h3>SilverGames</h3>
+
+            <p>
+                Disponibiliza jogos de ação, simulação, desporto e estratégia.
+            </p>
+
+        </div>
+
+
+        <div class="atividade">
+
+            <h3>Sheppard Software</h3>
+
+            <p>
+                Oferece jogos educativos de matemática, geografia, ciências e outras disciplinas.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJETO FINAL -->
+
+    <section id="projeto">
+
+        <div class="projeto">
+
+            <h2>🎮 Conclusão</h2>
+
+            <p>
+                As plataformas de jogos online tornaram-se uma forma popular de entretenimento, pois permitem aceder a diversos jogos de maneira prática. No entanto, é importante utilizar esses sites com responsabilidade e equilibrar o tempo de jogo com outras atividades.
+            </p>
+
+            <br>
+
+            <p>
+              
+            </p>
+
+            <br>
+
+            <p>
+             
+                
+            </p>
+
+            <a href="#inicio" class="botao">
+                Voltar ao início
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+            🎮 Jogos Digitais – 1º Ano do Ensino Médio
+        </p>
+
+        <p>
+            Imaginar. Programar. Jogar. Aprender.
+        </p>
+
+        <br>
+
+        <p>
+            © 2026 - Projeto Educacional
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
